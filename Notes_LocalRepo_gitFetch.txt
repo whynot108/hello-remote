@@ -1,0 +1,122 @@
+[student@workstation hello-remote]$ git log origin/main
+commit 23e47b5c21cb32ea27f71496ad35b0e5411b5f94 (HEAD -> main, origin/main)
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 13:16:00 2022 -0500
+
+    added helloworld
+[student@workstation hello-remote]$ git fetch -p
+From https://github.com/whynot108/hello-remote
+ - [deleted]         (none)     -> origin/improve-greeting
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 1.24 KiB | 1.24 MiB/s, done.
+   23e47b5..b3f2a2d  main       -> origin/main
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ git log origin/main
+commit b3f2a2de0ea5dc469c8a98028e7dc65d3be74910 (origin/main)
+Merge: 51342b5 ae0b99a
+Author: whynot108 <94866260+whynot108@users.noreply.github.com>
+Date:   Tue Nov 29 14:33:41 2022 -0500
+
+    Merge pull request #2 from whynot108/improve-greeting
+    
+    Add more encouraging words
+
+commit ae0b99a093cab5717795cf954d911491edcc7df1 (improve-greeting)
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 14:28:39 2022 -0500
+
+    Add more encouraging words
+
+commit 51342b5820466369e017dbbdcd0523e5343dbef1
+Merge: 23e47b5 2353e91
+Author: whynot108 <94866260+whynot108@users.noreply.github.com>
+Date:   Tue Nov 29 14:21:13 2022 -0500
+
+    Merge pull request #1 from whynot108/improve-greeting
+    
+    added parameter to greeting message
+
+commit 2353e9161467c20bb6ee156bb77a5568129a9436
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 14:17:50 2022 -0500
+
+    extracted cli argument to variable
+
+commit 8990fd17cd20d9c401fc3dd0cc41a18ff0cfdfbc
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 13:56:41 2022 -0500
+
+    added parameter to greeting message
+
+commit 23e47b5c21cb32ea27f71496ad35b0e5411b5f94 (HEAD -> main)
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 13:16:00 2022 -0500
+
+    added helloworld
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ git log
+commit 23e47b5c21cb32ea27f71496ad35b0e5411b5f94 (HEAD -> main)
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 13:16:00 2022 -0500
+
+    added helloworld
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ git merge origin/main
+Updating 23e47b5..b3f2a2d
+Fast-forward
+ helloworld.py | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ git branch -d improve-greeting
+Deleted branch improve-greeting (was ae0b99a).
+[student@workstation hello-remote]$ 
+[student@workstation hello-remote]$ git log
+commit b3f2a2de0ea5dc469c8a98028e7dc65d3be74910 (HEAD -> main, origin/main)
+Merge: 51342b5 ae0b99a
+Author: whynot108 <94866260+whynot108@users.noreply.github.com>
+Date:   Tue Nov 29 14:33:41 2022 -0500
+
+    Merge pull request #2 from whynot108/improve-greeting
+    
+    Add more encouraging words
+
+commit ae0b99a093cab5717795cf954d911491edcc7df1
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 14:28:39 2022 -0500
+
+    Add more encouraging words
+
+commit 51342b5820466369e017dbbdcd0523e5343dbef1
+Merge: 23e47b5 2353e91
+Author: whynot108 <94866260+whynot108@users.noreply.github.com>
+Date:   Tue Nov 29 14:21:13 2022 -0500
+
+    Merge pull request #1 from whynot108/improve-greeting
+    
+    added parameter to greeting message
+
+commit 2353e9161467c20bb6ee156bb77a5568129a9436
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 14:17:50 2022 -0500
+
+    extracted cli argument to variable
+
+commit 8990fd17cd20d9c401fc3dd0cc41a18ff0cfdfbc
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 13:56:41 2022 -0500
+
+    added parameter to greeting message
+
+commit 23e47b5c21cb32ea27f71496ad35b0e5411b5f94
+Author: Andrew Xu <andrew.xu@user.email>
+Date:   Tue Nov 29 13:16:00 2022 -0500
+
+    added helloworld
+[student@workstation hello-remote]$ 
+
